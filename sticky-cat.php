@@ -159,8 +159,9 @@ class ShowMeTheStickiesInTheCat_Widget extends WP_Widget {
 
 }
 
-// Add ShowMeTheStickiesInTheCat widget
-add_action( 'widgets_init', function(){
+function stickycat_init() {
 	return register_widget( 'ShowMeTheStickiesInTheCat_Widget' );
-});
+}
+// Add ShowMeTheStickiesInTheCat widget
+add_action( 'widgets_init', 'stickycat_init' );
 ?>
